@@ -11,7 +11,7 @@ return {
 	settings = {
 		Lua = {
 			runtime = {
-				version = "LUAJIT",
+				version = "LuaJIT",
 				path = runtime_path, 
 			},
 			diagnostics = {

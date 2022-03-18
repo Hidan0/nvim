@@ -59,6 +59,7 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim")
 	use("nvim-lualine/lualine.nvim")
+  use("simrat39/rust-tools.nvim")
 
 	-- ==== Themes ====
 	use({
