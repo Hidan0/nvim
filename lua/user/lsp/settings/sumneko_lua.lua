@@ -1,18 +1,19 @@
-local sumneko_binary_path = vim.fn.exepath('lua-language-server')
-local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ':h:h:h')
+local sumneko_binary_path = vim.fn.exepath("lua-language-server")
+local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ":h:h:h")
 
-local runtime_path = vim.split(package.path, ';')
+local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
-
+table.insert(runtime_path, "/usr/lib/luarocks/rocks-5.4/?.lua")
+table.insert(runtime_path, "/usr/lib/luarocks/rocks-5.4/?/init.lua")
 
 return {
-  cmd = {sumneko_binary_path, "-E", sumneko_root_path .. "/main.lua"};
+	cmd = { sumneko_binary_path, "-E", sumneko_root_path .. "/main.lua" },
 	settings = {
 		Lua = {
 			runtime = {
 				version = "LuaJIT",
-				path = runtime_path, 
+				path = runtime_path,
 			},
 			diagnostics = {
 				globals = { "vim" },
