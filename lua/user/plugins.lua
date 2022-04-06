@@ -60,6 +60,8 @@ return packer.startup(function(use)
 	use("antoinemadec/FixCursorHold.nvim")
 	use("nvim-lualine/lualine.nvim")
   use("simrat39/rust-tools.nvim")
+  use("machakann/vim-sandwich")
+  use("anuvyklack/pretty-fold.nvim")
 
 	-- ==== Themes ====
 	use({
