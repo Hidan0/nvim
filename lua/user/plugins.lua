@@ -62,6 +62,17 @@ return packer.startup(function(use)
   use("simrat39/rust-tools.nvim")
   use("machakann/vim-sandwich")
   use("anuvyklack/pretty-fold.nvim")
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  })
+  use({
+    "danymat/neogen",
+  })
 
   -- ==== Themes ====
   use({
