@@ -5,7 +5,7 @@ if not status then
 end
 
 configs.setup {
-  ensure_installed = "maintained",
+  -- ensure_installed = "",
   sync_installed = false,
   ignore_install = { "" },
   highlight = {

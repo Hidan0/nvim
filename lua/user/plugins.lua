@@ -93,7 +93,20 @@ return packer.startup(function(use)
   -- ==== Snippet ====
   use("L3MON4D3/LuaSnip") -- snippet engine
   use("rafamadriz/friendly-snippets") -- some snippets
-
+  -- use { "github/copilot.vim" }
+  use {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup()
+      end, 100)
+    end,
+  }
+  use({
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+  })
   -- ==== LSP ====
   use("neovim/nvim-lspconfig") -- enable LSP
   use("williamboman/nvim-lsp-installer") -- server language installer
