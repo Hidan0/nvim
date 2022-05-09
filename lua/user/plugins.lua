@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use("nvim-lualine/lualine.nvim")
   use("simrat39/rust-tools.nvim")
   use("machakann/vim-sandwich")
+  use("anuvyklack/nvim-keymap-amend")
   use("anuvyklack/pretty-fold.nvim")
   use({
     "iamcco/markdown-preview.nvim",
@@ -74,11 +75,20 @@ return packer.startup(function(use)
     "danymat/neogen",
   })
 
+  use("tikhomirov/vim-glsl")
+  use { 'timtro/glslView-nvim', ft = 'glsl' }
+
   -- ==== Themes ====
   use({
     "catppuccin/nvim",
     as = "catppuccin",
   })
+  use("navarasu/onedark.nvim")
+  use("morhetz/gruvbox")
+  use("savq/melange")
+  use("EdenEast/nightfox.nvim")
+  use("folke/tokyonight.nvim")
+  use("Mofiqul/vscode.nvim")
 
   -- ==== Compilation ====
   use("hrsh7th/nvim-cmp") -- main plugin
