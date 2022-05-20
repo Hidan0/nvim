@@ -21,7 +21,7 @@ local diagnostics = {
 local diff = {
 	"diff",
 	colored = false,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+	symbols = { added = "  ", modified = " ", removed = " " },
 	cond = hide_in_width,
 }
 
