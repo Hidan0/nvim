@@ -75,6 +75,8 @@ keymap(
 )
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
-keymap("n", "<leader>F", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
+keymap("n", "<leader>F", ":Format<CR>", opts)
 keymap("n", "<leader>nf", ":Neogen<CR>", opts)
 
+keymap("n", "<leader>|", ":vsplit<CR>", opts)
+keymap("n", "<leader>-", ":split<CR>", opts)
