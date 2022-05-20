@@ -80,3 +80,5 @@ keymap("n", "<leader>nf", ":Neogen<CR>", opts)
 
 keymap("n", "<leader>|", ":vsplit<CR>", opts)
 keymap("n", "<leader>-", ":split<CR>", opts)
+keymap("n", "<leader>k", ":CodeActionMenu<CR>", opts)
+
