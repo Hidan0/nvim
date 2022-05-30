@@ -75,9 +75,6 @@ return packer.startup(function(use)
 		"danymat/neogen",
 	})
 
-	use("tikhomirov/vim-glsl")
-	use({ "timtro/glslView-nvim", ft = "glsl" })
-
 	use("kosayoda/nvim-lightbulb")
 	use("weilbith/nvim-code-action-menu")
 	use("karb94/neoscroll.nvim")
@@ -108,20 +105,20 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("rafamadriz/friendly-snippets") -- some snippets
 	-- use { "github/copilot.vim" }
-	use({
-		"zbirenbaum/copilot.lua",
-		event = { "VimEnter" },
-		config = function()
-			vim.defer_fn(function()
-				require("copilot").setup()
-			end, 100)
-		end,
-	})
-
-	use({
-		"zbirenbaum/copilot-cmp",
-		after = { "copilot.lua", "nvim-cmp" },
-	})
+	-- use({
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	event = { "VimEnter" },
+	-- 	config = function()
+	-- 		vim.defer_fn(function()
+	-- 			require("copilot").setup()
+	-- 		end, 100)
+	-- 	end,
+	-- })
+	--
+	-- use({
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	after = { "copilot.lua", "nvim-cmp" },
+	-- })
 	-- ==== LSP ====
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- server language installer

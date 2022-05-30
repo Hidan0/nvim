@@ -4,6 +4,8 @@ if not status then
   return
 end
 
+vim.cmd[[au BufRead,BufNewFile *.wgsl	set filetype=wgsl]]
+
 configs.setup {
   -- ensure_installed = "",
   sync_installed = false,
