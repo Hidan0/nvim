@@ -10,9 +10,16 @@ catppuccin.setup({
 	styles = {
 		comments = "italic",
 		functions = "italic",
-		keywords = "italic",
+		keywords = "bold",
 		strings = "NONE",
 		variables = "italic",
+		conditionals = "italic",
+		loops = "NONE",
+		numbers = "NONE",
+		booleans = "NONE",
+		properties = "NONE",
+		types = "NONE",
+		operators = "NONE",
 	},
 	integrations = {
 		treesitter = true,
@@ -66,8 +73,9 @@ catppuccin.setup({
 		lightspeed = false,
 		ts_rainbow = true,
 		hop = false,
-		notify = true,
-		telekasten = true,
+		notify = false,
+		telekasten = false,
+		symbols_outline = false,
 	},
 })
 
