@@ -7,9 +7,3 @@ end
 require("user.lsp.config")
 require("user.lsp.handlers").setup()
 require("user.lsp.null-ls")
-
-local ok, _ = pcall(require, "rust-tools")
-if not ok then
-  vim.notify("Can not load rust-tools")
-  return
-end
